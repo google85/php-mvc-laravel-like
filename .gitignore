@@ -3,8 +3,7 @@
 /.vscode
 
 # credentials
-.env
-.env.backup
+#/src/.env
 
 # custom step-by-step README file
 /.README.md
