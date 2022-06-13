@@ -7,7 +7,9 @@ class Request
      */
     public static function uri($pathPrefix = null)
     {
-        $uri = $_SERVER['REQUEST_URI'];
+        //get only the URL path, without query strings
+        $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        //$uri = $_SERVER['REQUEST_URI'];
         
         //optional
         if (!empty($pathPrefix)) {
