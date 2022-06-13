@@ -1,5 +1,7 @@
 <?php
-$config = require 'config.php';
+$config = require '../config.php';
+
+require 'Router.php';
 require 'database/Connection.php';
 require 'database/QueryBuilder.php';
 

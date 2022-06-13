@@ -3,11 +3,19 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-$query = require 'bootstrap.php';
+$database = require 'core/bootstrap.php';
 
-require 'Task.php';
+$router = new Router;
 
+require 'routes.php';
 
-$tasks = $query->selectAll('todos');
+//var_dump($_SERVER);
 
-require 'index.view.php';
+$uri = $_SERVER['REQUEST_URI'];
+//optional
+if (!empty($config['optional']['path_prefix'])) {
+    $uri = str_replace($config['optional']['path_prefix'], '', $uri);
+}
+$uri = trim($uri, '/');
+
+require $router->direct($uri);

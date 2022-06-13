@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+#    RewriteBase /website/mvc/
+    RewriteBase /home/djbpfcom/public_html/sites/florinboy.com/website/mvc/
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+#    RewriteRule ^.*$ index.php?uri=$0 [L]
+#    RewriteRule (/website/mvc/)^ index.php [L]
+    RewriteRule ^ index.php [L]
+</IfModule>

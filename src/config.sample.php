@@ -9,5 +9,8 @@ return [
         'options' => [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]
+    ],
+    'optional' => [
+        'path_prefix' => '/folder'     //prefix from path to be removed
     ]
 ];
