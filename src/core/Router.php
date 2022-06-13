@@ -4,7 +4,21 @@ class Router
 {
     protected $routes = [];
     
+    /**
+     * load route files
+     */
+    public static function load($file)
+    {
+        $router = new static;
+        
+        require $file;
+        
+        return $router; //for chaining purposes
+    }
     
+    /**
+     * define routes
+     */
     public function define($routes)
     {
         $this->routes = $routes;

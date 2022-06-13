@@ -5,12 +5,6 @@ ini_set('display_errors', '1');
 
 $database = require 'core/bootstrap.php';
 
-$router = new Router;
-
-require 'routes.php';
-
-//var_dump($_SERVER);
-
 $uri = $_SERVER['REQUEST_URI'];
 //optional
 if (!empty($config['optional']['path_prefix'])) {
@@ -18,4 +12,5 @@ if (!empty($config['optional']['path_prefix'])) {
 }
 $uri = trim($uri, '/');
 
-require $router->direct($uri);
+require Router::load('../routes.php')
+    ->direct($uri);
