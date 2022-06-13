@@ -10,6 +10,6 @@ $stmt = $pdo->prepare('select * from todos');
 
 $stmt->execute();
 
-var_dump($stmt->fetchAll());
+var_dump($stmt->fetchAll(PDO::FETCH_OBJ));
 
 require 'index.view.php';
