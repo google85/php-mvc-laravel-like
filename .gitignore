@@ -2,6 +2,10 @@
 /.idea
 /.vscode
 
-# site
-/.clean
+# credentials
+.env
+.env.backup
+
+# custom step-by-step README file
 /.README.md
+/.clean
