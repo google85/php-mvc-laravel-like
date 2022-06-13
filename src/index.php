@@ -7,4 +7,7 @@ require 'core/bootstrap.php';
 
 
 require Router::load('../routes.php')
-    ->direct(Request::uri($app['config']['optional']['path_prefix']));
+    ->direct(
+        Request::uri($app['config']['optional']['path_prefix']),
+        Request::method()
+    );

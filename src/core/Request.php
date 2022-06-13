@@ -19,4 +19,13 @@ class Request
         
         return $uri;
     }
+    
+    /**
+     * get the request method
+     * @return string GET|POST|...
+     */
+    public static function method()
+    {
+        return $_SERVER['REQUEST_METHOD'];
+    }
 }
