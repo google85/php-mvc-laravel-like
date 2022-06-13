@@ -20,14 +20,6 @@ class Router
     }
     
     /**
-     * define routes
-     */
-    public function define($routes)
-    {
-        $this->routes = $routes;
-    }
-    
-    /**
      * define GET routes
      */
     public function get($uri, $controller)

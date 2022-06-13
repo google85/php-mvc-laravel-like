@@ -1,3 +1,6 @@
 <?php
 
-var_dump($_POST);
+//var_dump('You typed '. $_POST['name']);
+$app['database']->insert('users', [
+    'name' => $_POST['name']
+]);
