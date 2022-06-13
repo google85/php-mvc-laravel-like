@@ -14,6 +14,6 @@ $stmt->execute();
 
 $tasks = $stmt->fetchAll(PDO::FETCH_CLASS, 'Task');
 
-var_Dump($tasks[0]->foobar);
+var_Dump($tasks[0]->foobar());
 
 require 'index.view.php';
