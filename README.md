@@ -4,9 +4,9 @@
 
 # PHP MVC 'Laravel like' basic framework
 ### using PHP
-### based on **[Laracasts tutorial](https://laracasts.com/series/php-for-beginners/)**
 
 ### 
+- based on **[Laracasts tutorial](https://laracasts.com/series/php-for-beginners/)**
 - **[temporary website](https://florinboy.com/website/mvc/)**
 
 ### steps:
