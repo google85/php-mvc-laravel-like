@@ -1,17 +1,17 @@
-    <?php require 'partials/head.php'; ?>
+<?php require 'partials/head.php'; ?>
     
-    <h1>My Tasks</h1>
+<h1>My Tasks</h1>
     
-    <ul>
-        <?php foreach ($tasks as $task) : ?>
-            <li>
-                <?php if ($task->completed) : ?>
-                    <strike><?= $task->description ?></strike>
-                <?php else: ?>
-                    <?= $task->description ?>
-                <?php endif; ?>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+<ul>
+    <?php foreach ($tasks as $task) : ?>
+        <li>
+            <?php if ($task->completed) : ?>
+                <strike><?= $task->description ?></strike>
+            <?php else: ?>
+                <?= $task->description ?>
+            <?php endif; ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
     
-    <?php require 'partials/footer.php'; ?>
+<?php require 'partials/footer.php'; ?>

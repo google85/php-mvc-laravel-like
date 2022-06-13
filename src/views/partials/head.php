@@ -2,14 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Todos</title>
-    <style>
-        header {
-            background: #e3e3e3;
-            padding: 2em;
-            text-align: center;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <?php require 'nav.php'; ?>
+<?php require 'nav.php'; ?>
