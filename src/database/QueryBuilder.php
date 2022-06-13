@@ -11,12 +11,14 @@ class QueryBuilder
 
     /**
     * fetch all objects from table db
+    * @param string $table
+    * @param string $intoClass - class into which the data is fetched
     */
     public function selectAll($table)
     {
         $stmt = $this->pdo->prepare("select * from {$table}");
         $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_CLASS/*, 'Task'*/);
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
 }
