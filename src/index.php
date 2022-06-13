@@ -5,4 +5,11 @@ try {
 } catch (PDOException $e) {
     die('Could not connect.');
 }
+
+$stmt = $pdo->prepare('select * from todos');
+
+$stmt->execute();
+
+var_dump($stmt->fetchAll());
+
 require 'index.view.php';
