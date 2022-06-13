@@ -8,7 +8,7 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
-    
+
     /**
     * fetch all objects from table db
     */
