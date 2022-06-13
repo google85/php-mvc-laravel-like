@@ -8,3 +8,4 @@
 # custom step-by-step README file
 /.README.md
 /.clean
+/src/public/error_log
