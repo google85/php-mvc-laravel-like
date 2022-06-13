@@ -1,0 +1,7 @@
+# IDE specific
+/.idea
+/.vscode
+
+# site
+/.clean
+/.README.md
