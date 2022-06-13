@@ -5,13 +5,6 @@ require 'Task.php';
 
 $pdo = connectToDb();
 
-
-$stmt = $pdo->prepare('select * from todos');
-
-$stmt->execute();
-
-$tasks = $stmt->fetchAll(PDO::FETCH_CLASS, 'Task');
-
-var_Dump($tasks[0]->foobar());
+$tasks = fetchAllTaks($pdo);
 
 require 'index.view.php';
