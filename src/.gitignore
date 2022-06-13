@@ -4,4 +4,6 @@
 
 config.php
 
+/vendor
+/composer.lock
 /.clean
