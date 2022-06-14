@@ -17,6 +17,12 @@
 ```
 git clone https://github.com/google85/php-mvc-laravel-like
 ```
+- create your own database
+```
+CREATE DATABASE `dev_mytodo` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+- import the database dump (from database/dump.sql) into yours
+
 - create a config based on the sample provided
 ```
 cd src/
@@ -26,11 +32,12 @@ cp config.sample.php config.php
 ```
 composer install
 ```
+
 - add your own routes
 ```
 vi routes.php
 ```
-- add your own controllers
+- add your own controllers, models
 ```
 cd controllers/
 touch MyController.php
@@ -38,7 +45,7 @@ touch MyController.php
 - add your own views
 ```
 cd views/
-touch myown.view.php
+touch page.view.php
 ```
 
 ### That's it!
@@ -46,4 +53,5 @@ touch myown.view.php
 
 
 ## License
+Free to use, all the bugs & necesary changes should be reported directly to the author.
 
