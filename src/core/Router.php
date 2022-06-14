@@ -10,7 +10,10 @@ class Router
     ];
     
     /**
-     * load route files
+     * load route files into the router object
+     * 
+     * @param file $file
+     * @return array $router
      */
     public static function load($file)
     {
@@ -23,6 +26,10 @@ class Router
     
     /**
      * define GET routes
+     * 
+     * @param string $uri
+     * @param string $controller
+     * @return void
      */
     public function get($uri, $controller)
     {
@@ -31,12 +38,23 @@ class Router
     
     /**
      * define POST routes
+     * 
+     * @param string $uri
+     * @param string $controller
+     * @return void
      */
     public function post($uri, $controller)
     {
         $this->routes['POST'][$uri] = $controller;
     }
     
+    /**
+     * direct the request to the respective controller's action
+     * 
+     * @param string $uri
+     * @param string $requestType
+     * @return mixed the call to the controller's action
+     */
     public function direct($uri, $requestType)
     {
         if (array_key_exists($uri, $this->routes[$requestType])) {
@@ -51,6 +69,10 @@ class Router
 
     /**
      * call the action of the controller
+     * 
+     * @param string $controller
+     * @param string $action
+     * @return mixed the call to the controller's action
      */
     protected function callAction($controller, $action)
     {

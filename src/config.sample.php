@@ -11,6 +11,6 @@ return [
         ]
     ],
     'optional' => [
-        'path_prefix' => '/folder'     //prefix from path to be removed
+        'path_prefix' => '/subfolder'     //prefix from path to be removed
     ]
 ];

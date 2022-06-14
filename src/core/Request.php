@@ -6,14 +6,16 @@ class Request
 {
     /**
      * get the route path URI, with the optional fixes
+     * 
+     * @param string  $pathPrefix - the prefix path that should be ommited when routing, for example if running your project from a subfolder
+     * @return string $uri
      */
     public static function uri($pathPrefix = null)
     {
         //get only the URL path, without query strings
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        //$uri = $_SERVER['REQUEST_URI'];
         
-        //optional
+        //optional, if we run from a subfolder
         if (!empty($pathPrefix)) {
             $uri = str_replace($pathPrefix, '', $uri);
         }
@@ -24,7 +26,8 @@ class Request
     
     /**
      * get the request method
-     * @return string GET|POST|...
+     * 
+     * @return string 'GET|POST|...'
      */
     public static function method()
     {

@@ -1,9 +1,6 @@
 <?php
 
 use App\Core\App;
-//use App\Core\Database\Connection;
-//use App\Core\Database\QueryBuilder;
-
 
 if (!file_exists('../config.php')) {
     die('Please create a config file by copying from copy.sample.php!');
@@ -18,6 +15,14 @@ App::bind('database', new QueryBuilder(
 
 
 //helpers
+
+/**
+ * display a view page
+ * 
+ * @param string $name
+ * @param mixed $data
+ * @return string content of the view
+ */
 function view($name, $data = [])
 {
     extract($data);
@@ -25,7 +30,13 @@ function view($name, $data = [])
     return require dirname(dirname(__FILE__)) . "/app/views/{$name}.view.php";
 }
 
+/**
+ * redirect to a path
+ * 
+ * @param string $path
+ * @return header redirect
+ */
 function redirect($path)
 {
-    return header("Location: ./{$path}");
+    header("Location: ./{$path}");
 }
