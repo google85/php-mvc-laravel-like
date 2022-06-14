@@ -11,8 +11,9 @@ App::bind('database', new QueryBuilder(
     Connection::make(App::get('config')['database'])
 ));
 
-function view($name, $data = null)
+function view($name, $data = [])
 {
     extract($data);
+
     return require dirname(dirname(__FILE__)) . "/views/{$name}.view.php";
 }

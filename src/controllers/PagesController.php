@@ -4,13 +4,7 @@ class PagesController
 {
     public function home()
     {
-        // Receive the request.
-        $users = App::get('database')->selectAll('users');
-
-        return view('index', ['users' => $users]);
-
-        //require '../views/index.view.php';
-
+        return view('index');
     }
 
     public function about()
