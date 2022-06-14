@@ -6,9 +6,10 @@ ini_set('display_errors', '1');
 require('vendor/autoload.php');
 require 'core/bootstrap.php';
 
-
+//optional base folder where the project is
+$pathPrefix = $app['config']['optional']['path_prefix'] ?? null;
 require Router::load('../routes.php')
     ->direct(
-        Request::uri($app['config']['optional']['path_prefix']),
+        Request::uri($pathPrefix),
         Request::method()
     );
