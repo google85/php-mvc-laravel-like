@@ -23,6 +23,10 @@ git clone https://github.com/google85/php-mvc-laravel-like
 cd src/
 cp config.sample.php config.php
 ```
+- update composer dependencies and create the autoload classes
+```
+composer install
+```
 - add your own routes
 ```
 vi routes.php

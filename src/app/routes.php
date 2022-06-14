@@ -1,8 +1,5 @@
 <?php
 
-use App\Controllers\PagesController;
-use App\Controllers\UsersController;
-
 $router->get('', 'PagesController@home');
 $router->get('about', 'PagesController@about');
 $router->get('contact-us', 'PagesController@contact');

@@ -11,7 +11,7 @@ require 'core/bootstrap.php';
 //optional base folder where the project is
 $pathPrefix = App::get('config')['optional']['path_prefix'] ?? null;
 
-Router::load('../routes.php')
+Router::load('../app/routes.php')
     ->direct(
         Request::uri($pathPrefix),
         Request::method()

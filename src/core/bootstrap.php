@@ -22,7 +22,7 @@ function view($name, $data = [])
 {
     extract($data);
 
-    return require dirname(dirname(__FILE__)) . "/views/{$name}.view.php";
+    return require dirname(dirname(__FILE__)) . "/app/views/{$name}.view.php";
 }
 
 function redirect($path)
