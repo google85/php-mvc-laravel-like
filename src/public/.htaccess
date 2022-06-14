@@ -4,8 +4,6 @@
     </IfModule>
 
     RewriteEngine On
-#    RewriteBase /website/mvc/
-    RewriteBase /home/djbpfcom/public_html/sites/florinboy.com/website/mvc/
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
@@ -15,7 +13,5 @@
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-#    RewriteRule ^.*$ index.php?uri=$0 [L]
-#    RewriteRule (/website/mvc/)^ index.php [L]
     RewriteRule ^ index.php [L]
 </IfModule>
