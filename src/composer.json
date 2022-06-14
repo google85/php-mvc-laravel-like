@@ -1,7 +1,18 @@
 {
+    "name": "app/php-mvc-laravel-like",
+    "type": "project",
+    "description": "PHP custom framework, Laravel like",
+    "keywords": ["framework", "mvc"],
+    "authors": [
+    {
+        "name": "IneditVision",
+        "email": "florin@ineditvision.ro",
+        "role": "Developer"
+    }],
     "autoload": {
         "classmap": [
             "./"
         ]
-    }
+    },
+    "require": {}
 }
