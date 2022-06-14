@@ -7,25 +7,21 @@ class PagesController
         // Receive the request.
         $users = App::get('database')->selectAll('users');
 
-        require '../views/index.view.php';
+        return view('index', ['users' => $users]);
 
-        // Delegate.
-        
-        // Return a response.
+        //require '../views/index.view.php';
 
     }
 
     public function about()
     {
-
-        require '../views/about.view.php';
-
-
+        $company = 'Laracasts';
+        return view('about', ['company' => $company]);
     }
 
     public function contact()
     {
-        require '../views/contact.view.php';
+        return view('contact');
 
     }
 
