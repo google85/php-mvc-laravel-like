@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.shields.io/github/v/tag/google85/php-mvc-laravel-like?label=latest&style=plastic" alt="last version on GitHub"/>&nbsp;<img src="https://img.shields.io/github/last-commit/google85/php-mvc-laravel-like/main?label=last%20update&style=plastic" alt="Last commit"/>
+    <img src="https://img.shields.io/github/v/tag/google85/php-mvc-laravel-like?label=latest&style=plastic" alt="last version on GitHub"/>&nbsp;<img src="https://img.shields.io/github/last-commit/google85/php-mvc-laravel-like/main?label=last%20update&style=plastic" alt="Last commit"/>&nbsp;<a href="https://packagist.org/packages/google85/php-mvc-laravel-like"><img src="https://img.shields.io/packagist/dt/google85/php-mvc-laravel-like?style=plastic&color=brightgreen" alt="Total Downloads"/></a>
 </p>
 
 # PHP MVC 'Laravel like' basic framework
@@ -7,7 +7,6 @@
 
 ### 
 - based on **[Laracasts tutorial](https://laracasts.com/series/php-for-beginners/)**
-- **[temporary website](https://florinboy.com/website/mvc/)**
 
 ### Features:
 - MVC framework with customized routes

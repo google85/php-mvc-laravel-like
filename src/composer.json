@@ -1,5 +1,5 @@
 {
-    "name": "app/php-mvc-laravel-like",
+    "name": "google85/php-mvc-laravel-like",
     "type": "project",
     "description": "PHP custom framework, Laravel like",
     "keywords": ["framework", "mvc"],
