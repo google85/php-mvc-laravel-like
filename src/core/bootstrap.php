@@ -12,7 +12,7 @@ App::bind('database', new QueryBuilder(
 ));
 
 
-
+//helpers
 function view($name, $data = [])
 {
     extract($data);
